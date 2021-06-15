@@ -19,6 +19,8 @@ public class HW5 {
     String firstName = faker.name().firstName(),
             lastName = faker.name().lastName();
 
+    String pictureFileName = "testpic.jpg";
+
     @BeforeAll
     static void setUpConfig() {
         log.info("@BeforeAll");
@@ -46,13 +48,13 @@ public class HW5 {
         $("[aria-label='Choose Monday, January 7th, 1980']").click();
         $("#subjectsInput").setValue("Hindi").pressEnter();
         $("[for=hobbies-checkbox-1]").click();
-        $("#uploadPicture").uploadFile(new File("src/test/resources/testpic.jpg"));
+        $("#uploadPicture").uploadFromClasspath(pictureFileName);
         $("#currentAddress").setValue("RU,MO");
         $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#react-select-4-input").setValue("Delhi").pressEnter();
         $("#submit").scrollTo().click();
         $(".table").shouldHave(text(firstName), text(lastName), text("gori@vadu.du"), text("Male"), text("7322223322"),
-                text("7 January,1980"), text("Hindi"), text("RU,MO"), text("NCR"), text("Delhi"));
+                text("7 January,1980"), text("Hindi"), text(pictureFileName), text("RU,MO"), text("NCR"), text("Delhi"));
     }
 }
 
