@@ -1,7 +1,9 @@
 package pasges;
 
 import java.io.File;
+
 import static com.codeborne.selenide.Selenide.$;
+
 import com.codeborne.selenide.SelenideElement;
 
 public class FillForm {
@@ -54,7 +56,9 @@ public class FillForm {
         $(daySelect + dayofbirth).click();
     }
 
-    public void choiseHobbies() {  $(choisehobbie).click(); }
+    public void choiseHobbies() {
+        $(choisehobbie).click();
+    }
 
     public void currentAddress(String value) {
         $(currentaddressinput).setValue(value);
