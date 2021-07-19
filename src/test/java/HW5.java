@@ -18,6 +18,8 @@ public class HW5 {
     Faker faker = new Faker();
     String firstName = faker.name().firstName(),
             lastName = faker.name().lastName();
+    String Str1 = "Commit 1";
+    String Str2 = "Commit 2";
 
     String pictureFileName = "testpic.jpg";
 
@@ -32,8 +34,6 @@ public class HW5 {
     @Test
     void selenideFormFill() {
 
-        String newstring = "Commit 1";
-        String newstring = "Commit 2";
         open("https://demoqa.com/automation-practice-form");
         //    $("#firstName").setValue("FName");
         //    $("#lastName").setValue("LName");
