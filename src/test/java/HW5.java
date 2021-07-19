@@ -33,6 +33,7 @@ public class HW5 {
     void selenideFormFill() {
 
         String newstring = "Commit 1";
+        String newstring = "Commit 2";
         open("https://demoqa.com/automation-practice-form");
         //    $("#firstName").setValue("FName");
         //    $("#lastName").setValue("LName");
