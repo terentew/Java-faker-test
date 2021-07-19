@@ -20,6 +20,7 @@ public class HW5 {
             lastName = faker.name().lastName();
     String Str1 = "Commit 1";
     String Str2 = "Commit 2";
+    String Str3 = "Commit 3";
 
     String pictureFileName = "testpic.jpg";
 
